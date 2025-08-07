@@ -2498,7 +2498,7 @@ Platforms: iOS
 
 Returns the authorization status for the application to use the Camera Roll in Photos app.
 
-    cordova.plugins.diagnostic.getCameraRollAuthorizationStatus(successCallback, errorCallback);
+    cordova.plugins.diagnostic.getCameraRollAuthorizationStatus(successCallback, errorCallback, accessLevel);
 
 #### Parameters
 
