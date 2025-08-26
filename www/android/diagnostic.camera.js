@@ -76,7 +76,6 @@ var Diagnostic_Camera = (function(){
      *  - {Function} errorCallback -  The callback which will be called when the operation encounters an error.
      *  This callback function is passed a single string parameter containing the error message.
      * - {Boolean} storage - (Android only) If true, requests storage permissions in addition to CAMERA run-time permission.
-     *  On Android 13+, storage permissions are READ_MEDIA_IMAGES and READ_MEDIA_VIDEO. On Android 9-12, storage permission is READ_EXTERNAL_STORAGE.
      *  cordova-plugin-camera requires both storage and camera permissions.
      *  Defaults to true.
      */
@@ -117,7 +116,6 @@ var Diagnostic_Camera = (function(){
      * This callback function is passed a single string parameter which defines the resulting authorisation status as a value in cordova.plugins.diagnostic.permissionStatus.
      *  - {Function} errorCallback - function to call on failure to request authorisation.
      * - {Boolean} storage - (Android only) If true, requests storage permissions in addition to CAMERA run-time permission.
-     *  On Android 13+, storage permissions are READ_MEDIA_IMAGES and READ_MEDIA_VIDEO. On Android 9-12, storage permission is READ_EXTERNAL_STORAGE.
      *  cordova-plugin-camera requires both storage and camera permissions.
      *  Defaults to true.
      */
@@ -144,7 +142,6 @@ var Diagnostic_Camera = (function(){
      * This callback function is passed a single string parameter which defines the current authorisation status as a value in cordova.plugins.diagnostic.permissionStatus.
      *  - {Function} errorCallback - function to call on failure to request authorisation status.
      * - {Boolean} storage - (Android only) If true, queries storage permissions in addition to CAMERA run-time permission.
-     *  On Android 13+, storage permissions are READ_MEDIA_IMAGES and READ_MEDIA_VIDEO. On Android 9-12, storage permission is READ_EXTERNAL_STORAGE.
      *  cordova-plugin-camera requires both storage and camera permissions.
      *  Defaults to true.
      */
@@ -168,7 +165,6 @@ var Diagnostic_Camera = (function(){
      * This callback function is passed a single object parameter where each key indicates the permission name and the value defines the current authorisation status as a value in cordova.plugins.diagnostic.permissionStatus.
      *  - {Function} errorCallback - function to call on failure to request authorisation status.
      * - {Boolean} storage - (Android only) If true, queries storage permissions in addition to CAMERA run-time permission.
-     *  On Android 13+, storage permissions are READ_MEDIA_IMAGES and READ_MEDIA_VIDEO. On Android 9-12, storage permission is READ_EXTERNAL_STORAGE.
      *  cordova-plugin-camera requires both storage and camera permissions.
      *  Defaults to true.
      */
@@ -190,7 +186,6 @@ var Diagnostic_Camera = (function(){
      * This callback function is passed a single boolean parameter which is TRUE if the app currently has runtime authorisation to use location.
      *  - {Function} errorCallback - function to call on failure to request authorisation status.
      * - {Boolean} storage - (Android only) If true, requests storage permissions in addition to CAMERA run-time permission.
-     *  On Android 13+, storage permissions are READ_MEDIA_IMAGES and READ_MEDIA_VIDEO. On Android 9-12, storage permission is READ_EXTERNAL_STORAGE.
      *  cordova-plugin-camera requires both storage and camera permissions.
      *  Defaults to true.
      */
