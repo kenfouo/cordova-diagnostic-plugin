@@ -140,8 +140,6 @@ public class Diagnostic extends CordovaPlugin{
         Diagnostic.addBiDirMapEntry(_permissionsMap, "NEARBY_WIFI_DEVICES", "android.permission.NEARBY_WIFI_DEVICES");
         Diagnostic.addBiDirMapEntry(_permissionsMap, "POST_NOTIFICATIONS", "android.permission.POST_NOTIFICATIONS");
         Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_MEDIA_AUDIO", "android.permission.READ_MEDIA_AUDIO");
-        Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_IMAGES");
-        Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_MEDIA_VIDEO", "android.permission.READ_MEDIA_VIDEO");
 
         // API 34+
         Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_MEDIA_VISUAL_USER_SELECTED", "android.permission.READ_MEDIA_VISUAL_USER_SELECTED");
@@ -179,8 +177,6 @@ public class Diagnostic extends CordovaPlugin{
         Diagnostic.addBiDirMapEntry(_permissionsMap, "NEARBY_WIFI_DEVICES", 33);
         Diagnostic.addBiDirMapEntry(_permissionsMap, "POST_NOTIFICATIONS", 33);
         Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_MEDIA_AUDIO", 33);
-        Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_MEDIA_IMAGES", 33);
-        Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_MEDIA_VIDEO", 33);
 
         // API 34+
         Diagnostic.addBiDirMapEntry(_permissionsMap, "READ_MEDIA_VISUAL_USER_SELECTED", 34);
