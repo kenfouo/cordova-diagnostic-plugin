@@ -52,8 +52,6 @@ var Diagnostic = (function(){
         "READ_CONTACTS": "READ_CONTACTS",
         "READ_EXTERNAL_STORAGE": "READ_EXTERNAL_STORAGE",
         "READ_MEDIA_AUDIO": "READ_MEDIA_AUDIO",
-        "READ_MEDIA_IMAGES": "READ_MEDIA_IMAGES",
-        "READ_MEDIA_VIDEO": "READ_MEDIA_VIDEO",
         "READ_PHONE_NUMBERS": "READ_PHONE_NUMBERS",
         "READ_PHONE_STATE": "READ_PHONE_STATE",
         "READ_SMS": "READ_SMS",
@@ -956,7 +954,6 @@ var Diagnostic = (function(){
      * This callback function is passed a single object parameter where each key indicates the permission name and the value defines the current authorisation status as a value in cordova.plugins.diagnostic.permissionStatus.
      *  - {Function} errorCallback - function to call on failure to request authorisation status.
      * - {Boolean} storage - (Android only) If true, queries storage permissions in addition to CAMERA run-time permission.
-     *  On Android 13+, storage permissions are READ_MEDIA_IMAGES and READ_MEDIA_VIDEO. On Android 9-12, storage permission is READ_EXTERNAL_STORAGE.
      *  cordova-plugin-camera requires both storage and camera permissions.
      *  Defaults to true.
      */
