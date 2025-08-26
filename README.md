@@ -2290,8 +2290,7 @@ Notes:
 - On Windows 10 Mobile this returns true if both the device has a rear-facing camera AND the application is authorized to use it.
 
 Notes for Android:
-- By default this also checks run-time storage permissions in addition to `CAMERA` permission because [cordova-plugin-camera](https://github.com/apache/cordova-plugin-camera) requires both of these permission sets.
-  - On Android 13+, storage permissions are `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO`. On Android 12 and below, storage permissions are `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE`.
+- By default this also checks run-time storage permissions in addition to `CAMERA` permission because [cordova-plugin-camera](https://github.com/apache/cordova-plugin-camera) requires both of these permission sets.`WRITE_EXTERNAL_STORAGE`.
 
 ```
 cordova.plugins.diagnostic.isCameraAvailable(successCallback, errorCallback, storage)
@@ -2324,8 +2323,7 @@ Checks if the application is authorized to use the camera.
 
 Notes for Android:
 - This is intended for Android 6 / API 23 and above. Calling on Android 5.1 / API 22 and below will always return TRUE as permissions are already granted at installation time.
-- By default this also checks run-time storage permissions in addition to `CAMERA` permission because [cordova-plugin-camera](https://github.com/apache/cordova-plugin-camera) requires both of these permission sets.
-  - On Android 13+, storage permissions are `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO`. On Android 12 and below, storage permissions are `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE`.
+- By default this also checks run-time storage permissions in addition to `CAMERA` permission because [cordova-plugin-camera](https://github.com/apache/cordova-plugin-camera) requires both of these permission sets.`WRITE_EXTERNAL_STORAGE`.
 
 ```
 cordova.plugins.diagnostic.isCameraAuthorized(successCallback, errorCallback, storage)
@@ -2358,7 +2356,6 @@ Returns the combined camera authorization status for the application based on th
 Notes for Android:
 - This is intended for Android 6 / API 23 and above. Calling on Android 5.1 / API 22 and below will always return GRANTED status as permissions are already granted at installation time.
 - By default this also checks run-time storage permissions in addition to `CAMERA` permission because [cordova-plugin-camera](https://github.com/apache/cordova-plugin-camera) requires both of these permission sets.
-  - On Android 13+, storage permissions are `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO`. On Android 12 and below, storage permissions are `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE`.
 
 ```
 cordova.plugins.diagnostic.getCameraAuthorizationStatus(successCallback, errorCallback, storage)
@@ -2394,7 +2391,6 @@ Returns the individual camera authorization statuses for each of the relevant pe
 Notes for Android:
 - This is intended for Android 6 / API 23 and above. Calling on Android 5.1 / API 22 and below will always return GRANTED status as permissions are already granted at installation time.
 - By default this also checks run-time storage permissions in addition to `CAMERA` permission because [cordova-plugin-camera](https://github.com/apache/cordova-plugin-camera) requires both of these permission sets.
-  - On Android 13+, storage permissions are `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO`. On Android 12 and below, storage permissions are `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE`.
 
 ```
 cordova.plugins.diagnostic.getCameraAuthorizationStatuses(successCallback, errorCallback, storage)
@@ -2436,7 +2432,6 @@ this plugin provides a default message, but you should override this with your s
 Notes for Android:
 - This is intended for Android 6 / API 23 and above. Calling on Android 5.1 / API 22 and below will have no effect as the permissions are already granted at installation time.
 - By default this requests run-time storage permissions in addition to `CAMERA` permission because [cordova-plugin-camera](https://github.com/apache/cordova-plugin-camera) requires both of these permission sets.
-  - On Android 13+, storage permissions are `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO`. On Android 12 and below, storage permissions are `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE`.
 - Requested run-time permissions which must be added to `AndroidManifest.xml` - see [Android camera permissions](#android-camera-permissions).
 
 ```
@@ -3781,8 +3776,6 @@ The plugin defines all [dangerous permissions](http://developer.android.com/guid
 - `cordova.plugins.diagnostic.permission.READ_CONTACTS`
 - `cordova.plugins.diagnostic.permission.READ_EXTERNAL_STORAGE`
 - `cordova.plugins.diagnostic.permission.READ_MEDIA_AUDIO`
-- `cordova.plugins.diagnostic.permission.READ_MEDIA_IMAGES`
-- `cordova.plugins.diagnostic.permission.READ_MEDIA_VIDEO`
 - `cordova.plugins.diagnostic.permission.READ_PHONE_NUMBERS`
 - `cordova.plugins.diagnostic.permission.READ_PHONE_STATE`
 - `cordova.plugins.diagnostic.permission.READ_SMS`
@@ -3886,7 +3879,6 @@ Note that the Android variant of [`requestCameraAuthorization()`](#requestcamera
 This is because the Android camera API requires access to the device's storage to store captured images and videos.
 
 On Android <=12, this requires the `WRITE_EXTERNAL_STORAGE` and `READ_EXTERNAL_STORAGE` permissions.
-On Android >12, this requires the `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO` permissions.
 
 This is because the [cordova-plugin-camera@2.2+](https://github.com/apache/cordova-plugin-camera) requires both of these permissions.
 
@@ -3977,3 +3969,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
